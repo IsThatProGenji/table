@@ -2,8 +2,8 @@ import { Box } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Box align="center" opacity={0.4} fontSize="sm">
-      &copy; {new Date().getFullYear()} Takuya Matsuyama. All Rights Reserved.
+    <Box align="center" opacity={0.4} fontSize="sm" color={'black'} mt={8}>
+      &copy; {new Date().getFullYear()} Farcraft. All Rights Reserved.
     </Box>
   )
 }

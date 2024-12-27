@@ -51,9 +51,8 @@ const Navbar = props => {
       as="nav"
       w="100%"
       h={'55px'}
-     
       sx={{
-        backdropFilter: ['blur(10px)', 'blur(10px)', 'none', 'none'] // Apply blur on small screens only
+        backdropFilter: ['blur(10px)', 'blur(10px)', 'blur(10px)', 'blur(10px)'] // Apply blur on small screens only
       }}
       zIndex={2}
       {...props}
@@ -67,16 +66,11 @@ const Navbar = props => {
         justify="space-between"
       >
         <Flex align="center" mr={5} mt={4}>
-        
-            <Logo />
-    
+          <Logo />
         </Flex>
 
-      
         <Box flex={1} align="right">
           <ThemeToggleButton />
-
-         
         </Box>
       </Container>
     </Box>
