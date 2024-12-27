@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Takuya's website",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0",
+    "dev": "next dev ",
     "build": "next build",
     "start": "next start",
     "prettier": "prettier --write .",
-    "lint": "next lint"
+    "lint": "next lint",
+    "re:build": "rm -rf .next && next build"
   },
   "keywords": [],
   "author": "Takuya Matsuyama",
@@ -23,6 +24,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
+    "sharp": "^0.33.5",
     "three": "^0.157.0"
   },
   "devDependencies": {
