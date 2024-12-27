@@ -63,134 +63,137 @@ const Main = ({ children, router }) => {
             />
           </Section>
         </Box>
-
-        <Container
-          pt={0}
-          display="flex"
-          alignItems="flex-start"
-          mt={2}
-          justifyContent="center"
-        >
-          <Box mr={{ lg: 6, md: 6, sm: 3, base: 2 }}>
-            <LazyVoxelDog />
-          </Box>
-
-          <Box display="flex" flexDirection="column" alignItems="flex-start">
-            <Box
-              bg="#f4ede3"
-              w={{ lg: '80px', md: '80px', sm: '50px', base: '44px' }} // Fixed width
-              h={{ lg: '80px', md: '80px', sm: '50px', base: '45px' }} // Fixed height
-              mb={4}
-              border={mode === 1 ? '2px solid #000' : 'none'}
-              borderRadius="md"
-              overflow="hidden"
-              position="relative" // Required for layout="fill"
-              onClick={() => setMode(1)}
-              cursor="pointer"
-              _hover={{ filter: 'brightness(0.9)' }}
-            >
-              <Box
-                ml={{ lg: '7px', md: '7px', sm: '7px', base: '5px' }}
-                mt={{ lg: '7px', md: '7px', sm: '7px', base: '5px' }}
-                w={{ lg: '60px', md: '60px', sm: '35px', base: '30px' }} // Fixed width
-                h={{ lg: '60px', md: '60px', sm: '35px', base: '30px' }} // Fixed height
-                position="relative" // Required for layout="fill"
-                display="flex" // Use flex to center the content
-                alignItems="center" // Vertically centers the image
-                justifyContent="center" // Horizontally centers the image
-              >
-                <Image
-                  src="/images/normal.png"
-                  alt="Profile image"
-                  fill={true}
-                />
-              </Box>
-            </Box>
-            <Box
-              bg="#f4ede3"
-              w={{ lg: '80px', md: '80px', sm: '50px', base: '44px' }} // Fixed width
-              h={{ lg: '80px', md: '80px', sm: '50px', base: '45px' }} // Fixed height
-              mb={4}
-              _hover={{ filter: 'brightness(0.9)' }}
-              border={mode === 2 ? '2px solid #000' : 'none'}
-              borderRadius="md"
-              overflow="hidden"
-              position="relative" // Required for layout="fill"
-              onClick={() => setMode(2)}
-              cursor="pointer"
-            >
-              <Box
-                ml={{ lg: '14px', md: '14px', sm: '10px', base: '7px' }}
-                mt={{ lg: '14px', md: '14px', sm: '10px', base: '7px' }}
-                w={{ lg: '50px', md: '50px', sm: '30px', base: '30px' }} // Fixed width
-                h={{ lg: '50px', md: '50px', sm: '30px', base: '30px' }} // Fixed height
-                position="relative" // Required for layout="fill"
-                display="flex" // Use flex to center the content
-                alignItems="center" // Vertically centers the image
-                justifyContent="center" // Horizontally centers the image
-              >
-                <Image
-                  src="/images/leseh.png"
-                  alt="Profile image"
-                  fill={true}
-                />
-              </Box>
-            </Box>
-            <Box
-              bg="#f4ede3"
-              w={{ lg: '80px', md: '80px', sm: '50px', base: '44px' }} // Fixed width
-              h={{ lg: '80px', md: '80px', sm: '50px', base: '45px' }} // Fixed height
-              mb={4}
-              _hover={{ filter: 'brightness(0.9)' }}
-              border={mode === 3 ? '2px solid #000' : 'none'}
-              borderRadius="md"
-              overflow="hidden"
-              position="relative" // Required for layout="fill"
-              onClick={() => setMode(3)}
-              cursor="pointer"
-            >
-              <Box
-                ml={{ lg: '14px', md: '14px', sm: '8px', base: '7px' }}
-                mt={{ lg: '14px', md: '14px', sm: '8px', base: '7px' }}
-                w={{ lg: '50px', md: '50px', sm: '35px', base: '30px' }} // Fixed width
-                h={{ lg: '50px', md: '50px', sm: '35px', base: '30px' }} // Fixed height
-                position="relative" // Required for layout="fill"
-                display="flex" // Use flex to center the content
-                alignItems="center" // Vertically centers the image
-                justifyContent="center" // Horizontally centers the image
-              >
-                <Image
-                  src="/images/lipet.png"
-                  alt="Profile image"
-                  fill={true}
-                />
-              </Box>
-            </Box>
-          </Box>
-        </Container>
-        <Container
-          maxW={{ lg: '750', md: '750', sm: '450', base: '370' }}
-          pt={0}
-        >
-          <Box
-            ml={{ lg: '0', md: '0', sm: '0', base: '-3' }}
-            mr={{ lg: '95', md: '95', sm: '65', base: '40px' }}
+        <Section delay={0.3}>
+          <Container
+            pt={0}
+            display="flex"
+            alignItems="flex-start"
+            mt={2}
+            justifyContent="center"
           >
-            <Text
-              color={'black'}
-              fontSize={{ lg: 16, md: 16, sm: 12, base: 12 }}
-              fontWeight={400}
-              mt={4}
-              textAlign={'justify'}
-              lineHeight={1.5}
+            <Box mr={{ lg: 6, md: 6, sm: 3, base: 2 }}>
+              <LazyVoxelDog />
+            </Box>
+
+            <Box display="flex" flexDirection="column" alignItems="flex-start">
+              <Box
+                bg="#f4ede3"
+                w={{ lg: '80px', md: '80px', sm: '50px', base: '44px' }} // Fixed width
+                h={{ lg: '80px', md: '80px', sm: '50px', base: '45px' }} // Fixed height
+                mb={4}
+                border={mode === 1 ? '2px solid #000' : 'none'}
+                borderRadius="md"
+                overflow="hidden"
+                position="relative" // Required for layout="fill"
+                onClick={() => setMode(1)}
+                cursor="pointer"
+                _hover={{ filter: 'brightness(0.9)' }}
+              >
+                <Box
+                  ml={{ lg: '7px', md: '7px', sm: '7px', base: '5px' }}
+                  mt={{ lg: '7px', md: '7px', sm: '7px', base: '5px' }}
+                  w={{ lg: '60px', md: '60px', sm: '35px', base: '30px' }} // Fixed width
+                  h={{ lg: '60px', md: '60px', sm: '35px', base: '30px' }} // Fixed height
+                  position="relative" // Required for layout="fill"
+                  display="flex" // Use flex to center the content
+                  alignItems="center" // Vertically centers the image
+                  justifyContent="center" // Horizontally centers the image
+                >
+                  <Image
+                    src="/images/normal.png"
+                    alt="Profile image"
+                    fill={true}
+                  />
+                </Box>
+              </Box>
+              <Box
+                bg="#f4ede3"
+                w={{ lg: '80px', md: '80px', sm: '50px', base: '44px' }} // Fixed width
+                h={{ lg: '80px', md: '80px', sm: '50px', base: '45px' }} // Fixed height
+                mb={4}
+                _hover={{ filter: 'brightness(0.9)' }}
+                border={mode === 2 ? '2px solid #000' : 'none'}
+                borderRadius="md"
+                overflow="hidden"
+                position="relative" // Required for layout="fill"
+                onClick={() => setMode(2)}
+                cursor="pointer"
+              >
+                <Box
+                  ml={{ lg: '14px', md: '14px', sm: '10px', base: '7px' }}
+                  mt={{ lg: '14px', md: '14px', sm: '10px', base: '7px' }}
+                  w={{ lg: '50px', md: '50px', sm: '30px', base: '30px' }} // Fixed width
+                  h={{ lg: '50px', md: '50px', sm: '30px', base: '30px' }} // Fixed height
+                  position="relative" // Required for layout="fill"
+                  display="flex" // Use flex to center the content
+                  alignItems="center" // Vertically centers the image
+                  justifyContent="center" // Horizontally centers the image
+                >
+                  <Image
+                    src="/images/leseh.png"
+                    alt="Profile image"
+                    fill={true}
+                  />
+                </Box>
+              </Box>
+              <Box
+                bg="#f4ede3"
+                w={{ lg: '80px', md: '80px', sm: '50px', base: '44px' }} // Fixed width
+                h={{ lg: '80px', md: '80px', sm: '50px', base: '45px' }} // Fixed height
+                mb={4}
+                _hover={{ filter: 'brightness(0.9)' }}
+                border={mode === 3 ? '2px solid #000' : 'none'}
+                borderRadius="md"
+                overflow="hidden"
+                position="relative" // Required for layout="fill"
+                onClick={() => setMode(3)}
+                cursor="pointer"
+              >
+                <Box
+                  ml={{ lg: '14px', md: '14px', sm: '8px', base: '7px' }}
+                  mt={{ lg: '14px', md: '14px', sm: '8px', base: '7px' }}
+                  w={{ lg: '50px', md: '50px', sm: '35px', base: '30px' }} // Fixed width
+                  h={{ lg: '50px', md: '50px', sm: '35px', base: '30px' }} // Fixed height
+                  position="relative" // Required for layout="fill"
+                  display="flex" // Use flex to center the content
+                  alignItems="center" // Vertically centers the image
+                  justifyContent="center" // Horizontally centers the image
+                >
+                  <Image
+                    src="/images/lipet.png"
+                    alt="Profile image"
+                    fill={true}
+                  />
+                </Box>
+              </Box>
+            </Box>
+          </Container>
+        </Section>
+        <Section delay={0.5}>
+          <Container
+            maxW={{ lg: '750', md: '750', sm: '450', base: '370' }}
+            pt={0}
+          >
+            <Box
+              ml={{ lg: '0', md: '0', sm: '0', base: '-3' }}
+              mr={{ lg: '95', md: '95', sm: '65', base: '40px' }}
             >
-              Transform your workspace with our Compact Laptop Table—perfect for
-              your laptop, PC, or gadgets!, it features a space-saving,
-              lightweight design with adjustable heights and angles for maximum
-              comfort and ergonomics.
-            </Text>
-          </Box>
-        </Container>
+              <Text
+                color={'black'}
+                fontSize={{ lg: 16, md: 16, sm: 12, base: 12 }}
+                fontWeight={400}
+                mt={4}
+                textAlign={'justify'}
+                lineHeight={1.5}
+              >
+                Transform your workspace with our Compact Laptop Table—perfect
+                for your laptop, PC, or gadgets!, it features a space-saving,
+                lightweight design with adjustable heights and angles for
+                maximum comfort and ergonomics.
+              </Text>
+            </Box>
+          </Container>
+        </Section>
         {children}
         <Footer />
       </Container>

@@ -18,7 +18,7 @@ import {
 import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 import { IoLogoGithub } from 'react-icons/io5'
-
+import Section from './section'
 const LinkItem = ({ href, path, target, children, ...props }) => {
   const active = path === href
   const inactiveColor = useColorModeValue('gray.800', 'whiteAlpha.900')
@@ -57,22 +57,26 @@ const Navbar = props => {
       zIndex={2}
       {...props}
     >
-      <Container
-        display="flex"
-        p={2}
-        maxW="100%"
-        wrap="wrap"
-        align="center"
-        justify="space-between"
-      >
-        <Flex align="center" mr={5} mt={4}>
-          <Logo />
-        </Flex>
+      <Box>
+        <Section delay={0.1}>
+          <Container
+            display="flex"
+            p={2}
+            maxW="100%"
+            wrap="wrap"
+            align="center"
+            justify="space-between"
+          >
+            <Flex align="center" mr={5} mt={4}>
+              <Logo />
+            </Flex>
 
-        <Box flex={1} align="right">
-          <ThemeToggleButton />
-        </Box>
-      </Container>
+            <Box flex={1} align="right">
+              <ThemeToggleButton />
+            </Box>
+          </Container>
+        </Section>
+      </Box>
     </Box>
   )
 }
