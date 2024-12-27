@@ -1,6 +1,5 @@
 import { forwardRef } from 'react'
 import { Box, Spinner } from '@chakra-ui/react'
-import { useMode } from '../pages/ModeContext' // Import the useMode hook to access the context
 
 export const DogSpinner = () => (
   <Spinner

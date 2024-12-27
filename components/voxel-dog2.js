@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
 import { DogSpinner, DogContainer } from './voxel-dog-loader'
-import { useMode } from '../pages/ModeContext' // Import the useMode hook to access the context
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -13,7 +12,7 @@ const VoxelDogs = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const { mode } = useMode()
+
   const urlDogGLB =
     (process.env.NODE_ENV === 'production'
       ? 'https://craftzdog.global.ssl.fastly.net/homepage'

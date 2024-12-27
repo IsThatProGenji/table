@@ -3,7 +3,6 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import { loadGLTFModel } from '../lib/model'
 import { DogSpinner, DogContainer } from './voxel-dog-loader'
-import { useMode } from '../pages/ModeContext';  // Import the useMode hook to access the context
 
 function easeOutCirc(x) {
   return Math.sqrt(1 - Math.pow(x - 1, 4))
@@ -13,10 +12,11 @@ const VoxelDog = () => {
   const refContainer = useRef()
   const [loading, setLoading] = useState(true)
   const refRenderer = useRef()
-  const { mode } = useMode();
-  const urlDogGLB = (process.env.NODE_ENV === 'production' 
-    ? 'https://craftzdog.global.ssl.fastly.net/homepage' 
-    : '') +  '/dog.glb';  
+
+  const urlDogGLB =
+    (process.env.NODE_ENV === 'production'
+      ? 'https://craftzdog.global.ssl.fastly.net/homepage'
+      : '') + '/dog.glb'
   const handleWindowResize = useCallback(() => {
     const { current: renderer } = refRenderer
     const { current: container } = refContainer
@@ -77,10 +77,10 @@ const VoxelDog = () => {
       loadGLTFModel(scene, urlDogGLB, {
         receiveShadow: false,
         castShadow: false
-      }).then((model) => {
-        model.position.x -= 1; // Adjust this value as needed
-        model.scale.set(3, 3, 3); // Scale the model (2x bigger)
-        scene.add(model);
+      }).then(model => {
+        model.position.x -= 1 // Adjust this value as needed
+        model.scale.set(3, 3, 3) // Scale the model (2x bigger)
+        scene.add(model)
         animate()
         setLoading(false)
       })

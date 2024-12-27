@@ -6,7 +6,7 @@ import Footer from '../footer'
 import VoxelDogLoader from '../voxel-dog-loader'
 import Image from 'next/image'
 import Section from '../section'
-import { useMode } from '../../pages/ModeContext' // Import the custom hook
+import { useMode } from '../../context/ModeContext' // Import the custom hook
 
 const Main = ({ children, router }) => {
   const { mode, setMode } = useMode() // Get mode and setMode (renamed changeMode) from context
