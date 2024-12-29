@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: . # Use the Dockerfile in the current directory
+    ports:
+      - '3000:3000' # Expose port 3000
+    restart: always # Restart the container if it stops or fails
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app # Mount the current directory to /app inside the container
+    command: ['pm2-runtime', 'start', 'yarn', '--name', 'app', '--', 'start'] # Use PM2 to start the app

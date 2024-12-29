@@ -76,7 +76,7 @@ const VoxelDogs = () => {
         castShadow: false
       }).then(model => {
         model.position.x -= 1 // Adjust this value as needed
-        model.scale.set(3, 3, 3) // Scale the model (2x bigger)
+        model.scale.set(2.5, 2.5, 2.5) // Scale the model (2x bigger)
         scene.add(model)
         animate()
         setLoading(false)

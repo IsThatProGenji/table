@@ -7,7 +7,7 @@ const ThemeToggleButton = () => {
   return (
     <AnimatePresence mode="wait" initial={false}>
       <IconButton
-        aria-label="Toggle theme"
+        aria-label="Order Now"
         colorScheme={'white'}
         backgroundColor={'black'}
         borderRadius="full" // This adds a circular border radius
@@ -16,7 +16,7 @@ const ThemeToggleButton = () => {
             Order Now
           </Text>
         }
-        onClick={toggleColorMode}
+        onClick={() => window.open('https://msha.ke/farcraft', '_blank')}
         px={5}
         mr={2}
       />
