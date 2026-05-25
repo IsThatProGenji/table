@@ -1,8 +1,6 @@
-farcrafts.appline.id
+## Website Links : [Farcraft](farcrafts.appline.id) 
 
-farcrafts.appline.id
 
-farcrafts.appline.id
 
 ## Stack
 
