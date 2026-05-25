@@ -186,7 +186,7 @@ const Main = ({ children, router }) => {
                 textAlign={'justify'}
                 lineHeight={1.5}
               >
-                Transform your workspace with our Compact Laptop Table—perfect
+                Transform your workspace with our Compact Laptop Table perfect
                 for your laptop, PC, or gadgets!, it features a space-saving,
                 lightweight design with adjustable heights and angles for
                 maximum comfort and ergonomics.

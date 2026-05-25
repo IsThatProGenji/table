@@ -4,9 +4,9 @@ FROM node:22
 # Set the working directory inside the container
 WORKDIR /app
 
-# Install Yarn (ensure compatibility with Node.js 22)
+# Install Yarn 1.x (matches the existing yarn.lock format)
 RUN corepack enable
-RUN corepack prepare yarn@stable --activate
+RUN corepack prepare yarn@1.22.22 --activate
 
 # Copy the package.json and yarn.lock files into the container
 COPY package.json yarn.lock ./
